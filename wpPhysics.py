@@ -5,33 +5,22 @@ t = float(input('What is your time?: '))
 v1 = float(input('What is your initial velocity?: '))
 v2 = float(input('What is your final velocity?: '))
 def findAcc():
-    step1 = v2 - v1
-    step2 = step1 / t
-    a = step2
+    solution = (v2-v1)/t
+    a = solution
     print(str(a) + 'm/s/s')
 def findDis():
     if a == 0:
-        step1 = .5 * t
-        step2 = v2 + v1
-        step3 = step1 * step2
-        d = step3
+        solution = (.5*t)*(v2+v1)
+        d = solution
         print(str(d) + 'm')
     if a != 0:
-        step1 = v1 * t
-        step2 = .5 * a
-        time = t * t
-        step3 = step2 * time
-        step4 = step1 + step3
-        d = step4
+        solution = (.5*a)*(t*t)+(v1*t)
+        d = solution
         print(str(d) + 'm')
 def findTime():
     if v2 == 0:
-        step1 = .5 * a
-        time = t * t
-        step2 = step1 * time
-        step3 = d - step2
-        step4 = step3 / v1
-        t = step4
+        solution = (v2+v1)*.5/d
+        t = solution
         print(str(t) + "s")
 #def findInVel:
 #def findFinVel:
