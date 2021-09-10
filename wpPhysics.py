@@ -5,9 +5,20 @@ t = float(input('What is your time?: '))
 v1 = float(input('What is your initial velocity?: '))
 v2 = float(input('What is your final velocity?: '))
 def findAcc():
-    solution = (v2-v1)/t
-    a = solution
-    print(str(a) + 'm/s/s')
+    if d == 0:
+        solution = (v2-v1)/t
+        a = solution
+        print(str(a) + 'm/s/s')
+    if v2 == 0:
+        p1 = d-(v1*t)
+        solution = p1/(t*t*.5)
+        a = solution
+        print(str(a) + 'm/s/s')
+    if t == 0:
+        p1 = (v2*v2)-(v1*v1)
+        solution = p1/(2*d)
+        a = solution
+        print(str(a) + 'm/s/s')
 def findDis():
     if a == 0:
         solution = (.5*t)*(v2+v1)
@@ -32,4 +43,3 @@ if whatToFind == 'd' or whatToFind == 'distance' or whatToFind == 'displacment':
     findDis()
 if whatToFind == 't' or whatToFind == 'time':
     findTime()
-    
