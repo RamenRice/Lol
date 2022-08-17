@@ -46,7 +46,7 @@ print("""
  |_|   \__,_|___/___/\____|\___|_| |_|
 
 Password Generator
-Created By Lochlan
+Created By Ramen
 ________________________________________________________
 """)
 start = input('Would you like to use the password Generator? : ').lower()
